@@ -1,31 +1,31 @@
 /*************************************************************************
-	> File Name: OJ505.cpp
+	> File Name: OJ575.cpp
 	> Author: 
 	> Mail: 
-	> Created Time: Tue 23 Mar 22:11:18 2021
+	> Created Time: Thu 25 Mar 23:17:43 2021
  ************************************************************************/
-#include<string>
-#include<algorithm>
+
 #include<iostream>
+#include<map>
+#include<string>
 using namespace std;
 
-bool cmp(const string &a, const string &b){
-    return a + b > b + a;
-}
-
-string s[100005];
-int n;
-
 int main(){
+    map<string, int> m;
+    int n;
     cin >> n;
     for(int i = 0; i < n; i++){
-        cin >> s[i];
+        string t;
+        int t1;
+        cin >> t >> t1;
+        m[t] = t1;
     }
-    sort(s, s + n, cmp);
+    cin >> n;
     for(int i = 0; i < n; i++){
-        cout << s[i];
+        string t;
+        cin >> t; 
+        cout << m[t] << endl;
     }
-    cout << endl;
-
     return 0;
 }
+
